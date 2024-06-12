@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+  </head>
+  <body>
+    <header>
+      <a style="text-decoration: none" class="title-name">OMDB-Movie Website</a>
+      <div class="menu-icon" onclick="toggleNav()">&#9776;</div>
+      <nav>
+        <div class="close-btn" onclick="toggleNav()" style="cursor: pointer">
+          &#10006;
+        </div>
+        <a href="/">Home</a>
+        <a href="/addList">PlayList</a>
+        <a id="signupLink" href="/signupPage">Sign-Up</a>
+        <a id="loginLink" href="/loginPage">Login</a>
+        <a id="logoutLink" href="/logoutLink">Logout</a>
+      </nav>
+    </header>
+    <script>
+      const signupLink = document.getElementById("signupLink");
+      const loginLink = document.getElementById("loginLink");
+      const logoutLink = document.getElementById("logoutLink");
+
+      function toggleNav() {
+        var nav = document.querySelector("nav");
+        nav.classList.toggle("menu-open");
+      }
+
+      const fetchData = async () => {
+        try {
+          const response = await fetch("/navprofile");
+          if (response.ok) {
+            const data = await response.json();
+            console.log("Server response:", data.message);
+
+            loginLink.style.display = "none";
+            signupLink.style.display = "none";
+          } else {
+            console.log("Token not found on the server");
+
+            logoutLink.style.display = "none";
+          }
+        } catch (error) {
+          console.error("Error fetching data:", error);
+        }
+      };
+      fetchData();
+    </script>
+  </body>
+</html>
