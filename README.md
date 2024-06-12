@@ -1,4 +1,4 @@
-# Movie Search and Playlist Website
+# OMDB-Movie Website
 
 # Overview
 This project is a web application that allows users to search for movies using the OMDB API and add them to their personalized playlists. The website ensures secure access and data management using JSON Web Tokens (JWT) for authentication and security.
