@@ -1,70 +1,74 @@
-# Movies Website Project
-# Introduction
-Welcome to the Movies Website Project! This application allows users to browse, manage, and organize their favorite movies. Users can create accounts, log in, add movies to their personal cart, and perform CRUD (Create, Read, Update, Delete) operations on their movie list. The project leverages modern web development technologies including HTML, CSS, JavaScript, and Bootstrap for the front end, and Express, MongoDB, and REST APIs for the back end. Additionally, JWT (JSON Web Tokens) are used for secure user authentication.
+# OMDB-Movie Website
 
-**Click Here :-** https://movie-website-hjei6anu3-akshita-saxenas-projects.vercel.app/loginPage
+# Overview
+This project is a web application that allows users to search for movies using the OMDB API and add them to their personalized playlists. The website ensures secure access and data management using JSON Web Tokens (JWT) for authentication and security.
+
+**Click Here :-** https://omdb-movie-website.vercel.app/
 
 # Features
-1. User Authentication: Secure user registration and login using JWT.
-2. CRUD Operations: Full CRUD functionality for managing movies in the user’s cart.
-3. Responsive Design: Clean and responsive UI using Bootstrap.
-4. RESTful API: Backend API built with Express and MongoDB.
-5. Multiple Users: Support for multiple users with isolated carts.
-   
+- **Movie Search:** Search for movies using the OMDB API.
+- **Playlist Management:** Add, view, and manage movies in personalized playlists.
+- **Authentication & Security:** Secure user authentication using JSON Web Tokens (JWT).
+
 # Technologies Used
-1. Frontend:
-2. HTML
-3. CSS
-4. JavaScript
-5. Bootstrap
-6. Backend:
-7. Express.js
-8. MongoDB
-9. Authentication:
-10. JWT (JSON Web Token)
-    
+- **Frontend:**
+  - HTML
+  - CSS
+  - JavaScript
+- **Backend:**
+  - Node.js
+  - Express.js
+  - MongoDB
+- **APIs:**
+  - OMDB API for movie data.
+  - REST APIs for playlist management.
+- **Authentication:**
+  - JSON Web Tokens (JWT)
+
+# My Contributions
+- **Authentication & Authorization:** Implemented JWT for secure user authentication and authorization.
+- **API Integration:** Integrated OMDB API for movie search and developed REST APIs for playlist management.
+- **Frontend Development:** Created responsive and user-friendly interfaces using HTML, CSS, and JavaScript.
+
 # Installation
-**Prerequisites**
-1. Node.js and npm installed
-2. MongoDB installed and running
-   
-**Steps**
-1. Clone the Repository:
-   git clone https://github.com/akshitasaxena1309/Movie-website.git
-   cd movies-website
-   
-2. Install Dependencies:
-   npm install
-   
-3. Set Up Environment Variables:
-   Create a .env file in the root directory and add the following:
-   PORT=3000
-   MONGODB_URI=mongodb://localhost:27017/movies
-   JWT_SECRET=your_jwt_secret
-   
-4. Run the Server:
-   npm start
-   
-5. Access the Application:
-   Open your browser and go to http://localhost:3000
+1. Clone the repository:
+    ```sh
+    git clone https://github.com/akshitasaxena1309/OMDB-Movie-website.git
+    ```
+2. Navigate to the project directory:
+    ```sh
+    cd movie-playlist-website
+    ```
+3. Install dependencies:
+    ```sh
+    npm install
+    ```
+4. Set up environment variables:
+    - Create a `.env` file in the root directory.
+    - Add your OMDB API key and JWT secret to the `.env` file:
+        ```
+        OMDB_API_KEY=your_omdb_api_key
+        JWT_SECRET=your_jwt_secret
+        ```
+5. Start the server:
+    ```sh
+    npm start
+    ```
 
 # Usage
-**Register**
-  Navigate to the registration page and create a new account.
-**Login**
-  Log in using your registered credentials to access your personalized cart.
-**Add Movies**
-  Search for movies and add them to your cart.
-**View and Manage Cart**
-  View the movies in your cart, and perform CRUD operations like updating movie details or removing movies from the cart.
-  
+- Access the website at `https://omdb-movie-website.vercel.app/`.
+- Register or log in to search for movies and manage your playlist.
+- Use the search bar to find movies and add them to your personalized playlist.
+
 # Contributing
-Contributions are welcome! Please fork the repository and submit a pull request.
+Feel free to contribute to this project by opening issues or submitting pull requests.
 
 # License
 This project is licensed under the MIT License.
 
 # Contact
-For any inquiries or feedback, please contact us at [akshitasaxena38@gmail.com].
+For any questions or inquiries, please contact me at akshitasaxena38@gmail.com.
 
-Thank you for using the Movies Website Project! We hope you enjoy managing your movie collection.
+---
+
+*This project was developed as part of a collaborative team effort.*
