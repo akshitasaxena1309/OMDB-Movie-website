@@ -197,6 +197,7 @@ exports.addListPage = async (req, res) => {
   for (const cartItem of user.cart) {
     // Assuming each cart item has `title` and `img` fields for movie details
     cartWithMovies.push({
+      _id: cartItem._id,
       title: cartItem.title,
       img: cartItem.img,
     });
@@ -211,7 +212,7 @@ exports.deleteFromList = async (req, res) => {
     const userId = decoded.id;
     const user = await User.findById(userId);
     user.cart = user.cart.filter(
-      (cartItem) => cartItem.movie.toString() !== movieId
+      (cartItem) => cartItem._id.toString() !== movieId
     );
     await user.save();
     res.send({ success: true, cart: user.cart });
